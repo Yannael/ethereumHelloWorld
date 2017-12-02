@@ -8,7 +8,7 @@ The contract used as an example is a 'simpleStorage' application, which allows t
 See following video for a live version of the tutorial:
 
 <br>
-<a href="https://www.youtube.com/watch?v= fYT9rc04AhY" target="_blank"><img src="http://img.youtube.com/vi/fYT9rc04AhY/0.jpg" 
+<a href="https://www.youtube.com/watch?v=fYT9rc04AhY" target="_blank"><img src="http://img.youtube.com/vi/fYT9rc04AhY/0.jpg" 
 alt="Demo" width="480" height="360" border="10" align="center"/></a>
 
 

@@ -4,6 +4,14 @@ This tutorial aims at providing a simple starting point for developing Ethereum/
 
 The contract used as an example is a 'simpleStorage' application, which allows to set and get a character string from an Ethereum contract. 
 
+
+See following video for a live version of the tutorial:
+
+<br>
+<a href="https://www.youtube.com/watch?v= fYT9rc04AhY" target="_blank"><img src="http://img.youtube.com/vi/fYT9rc04AhY/0.jpg" 
+alt="Demo" width="480" height="360" border="10" align="center"/></a>
+
+
 Three main tools need to be installed for running this tutorial: `truffle` and `ganache`for the Ethereum development part, and `http-request` for running a local web server. These tools are based on [node.js](https://nodejs.org/en).
 
 With these tools, it is almost straightforward to create an Ethereum contract, send it on the blockchain, and interact with it from a website. 

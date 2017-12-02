@@ -1,0 +1,20 @@
+{
+  "name": "SimpleStorage",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The purpose of this tutorial is to create a basic Web application that interacts with a smart contract on Ethereum.",
+  "main": "interact.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bignumber.js": "1.1.0",
+    "truffle-contract": "3.0.1",
+    "web3": "0.20.2"
+  }
+}

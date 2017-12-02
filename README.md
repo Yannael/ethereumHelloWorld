@@ -88,10 +88,10 @@ The following tools are needed:
 * This tutorial repository (which is a [Truffle project](http://truffleframework.com/docs/getting_started/project)). Choose a folder where to install, for example in your home directory, git clone the repository, and install with `npm`:
 
 	```
-	export SIMPLE_STORAGE_DIR=$HOME
-	cd $SIMPLE_STORAGE_DIR
-	git clone https://gitlab.com/yannael/simpleStorage
-	cd simpleStorage
+	export ETHEREUM_APP=$HOME
+	cd $ETHEREUM_APP
+	git clone https://github.com/yannael/ethereumHelloWorld
+	cd ethereumHelloWorld
 	npm install
 	``` 
 
@@ -116,7 +116,7 @@ Ganache provides a simple simulation of the blockchain which is very convenient 
 Now go the simple storage application 
 
 ```
-cd $SIMPLE_APP_DIR
+cd $ETHEREUM_APP
 ```
 
 The folder is a Truffle project. The basic components of a Truffle project are:
@@ -135,7 +135,7 @@ This should return:
 
 ![Truffle compile](images-readme/truffle-compile.png)
 
-A new folder was created, `build`, in which the contracts definitions and binaries are stored in `json` files.
+A new folder was created, `build`, in which the contracts definitions and binaries are stored in `json` files. See [this page](http://truffleframework.com/docs/getting_started/compile) for more information on Truffle compilation.
 
 To migrate the contracts to the bock chain, use
 
@@ -147,7 +147,7 @@ This should return:
 
 ![Truffle compile](images-readme/truffle-migrations.png)
 
-You can see the SimpleStorage contract address is `0x345ca3e014aaf5dca488057592ee47305d9b3e10`, which was created in transaction `0x5d6f659f249801922e8f44b970ddf0c1711588556c1d8b0e2fd0b09cdc5d87cc`.
+You can see the SimpleStorage contract address is `0x345ca3e014aaf5dca488057592ee47305d9b3e10`, which was created in transaction `0x5d6f659f249801922e8f44b970ddf0c1711588556c1d8b0e2fd0b09cdc5d87cc`. See [this page](http://truffleframework.com/docs/getting_started/migrations) for more information on Truffle migration.
 
 Going to `ganache` user interface, in the 'Transactions' tab, you should see:
 
@@ -158,14 +158,34 @@ The logs tab will give you logs of these tansactions and contract creations, and
 
 ## Interact with the contract from a website
 
+The Web application is in `interactWithBlockchain.html`, in the main application folder. Start an HTTP server to serve the page:
 
+`
+http-server
+`
+
+It tells you the server is running at http://127.0.0.1:8080. Open the link in your browser, and open the `interactWithBlockchain.html` file. The page displays your current credit on your first Ethereum address, and allow you to change the status value in the contract. Below a screenshot of the web page, after having change the initial status 'Hello' in 'Here we go!':
+
+![Web page](images-readme/webpage.png)
+
+
+The javascript code in `interactWithBlockchain.html` basically creates a contract object from the compiled contract JSON file, and interacts with using the web3 API. Seethe [web3 documentation](https://github.com/ethereum/web3.js/) for more information on how to interact with contracts, and other possibilities provided by the web3 API.  
+
+You can in Ganache that a new transaction was created, from your contract address to the SimpleStorage contract address:
+
+![New transaction](images-readme/tx_contract.png)
+
+and get its content by clicking on it:
+
+![Transaction content compile](images-readme/tx_content.png)
 
 ## Going further:
 
-* [A more advanced tutorial for building a pet shop Web application with Ethereum](http://truffleframework.com/tutorials/pet-shop). Also provides more insights into Truffle possibilities.
+* A more advanced tutorial for building a pet shop Web application with Truffle: [http://truffleframework.com/tutorials/pet-shop](http://truffleframework.com/tutorials/pet-shop).
 * [Truffle official documentation](http://truffleframework.com/docs/)
 * [Ethereum documentation](http://www.ethdocs.org/en/latest/)
-* [Web3 documentation](). Note: New version 1.0 upcoming, see there for the doc https://web3js.readthedocs.io/en/1.0/
-* https://www.ethereum.org/token
-* https://www.netguru.co/codestories/getting-started-with-ethereum-development
-* Truffle+testnet https://blog.zeppelin.solutions/the-hitchhikers-guide-to-smart-contracts-in-ethereum-848f08001f05
+* [Web3 documentation](https://github.com/ethereum/web3.js/). 
+
+## Donations
+
+If you found the content useful and feel generous: 0xc81F41fdBCF8e58F0Af07858dFc5F4E6B5D1C879

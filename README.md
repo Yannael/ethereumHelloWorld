@@ -169,9 +169,9 @@ It tells you the server is running at http://127.0.0.1:8080. Open the link in yo
 ![Web page](images-readme/webpage.png)
 
 
-The javascript code in `interactWithBlockchain.html` basically creates a contract object from the compiled contract JSON file, and interacts with using the web3 API. Seethe [web3 documentation](https://github.com/ethereum/web3.js/) for more information on how to interact with contracts, and other possibilities provided by the web3 API.  
+The javascript code in `interactWithBlockchain.html` basically creates a contract object from the compiled contract JSON file, and interacts with using the web3 API. See the [web3 documentation](https://github.com/ethereum/web3.js/) for more information on how to interact with contracts, and other possibilities provided by the web3 API.  
 
-You can in Ganache that a new transaction was created, from your contract address to the SimpleStorage contract address:
+You can see in Ganache that a new transaction was created, from your contract address, to the SimpleStorage contract address:
 
 ![New transaction](images-readme/tx_contract.png)
 

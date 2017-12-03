@@ -1,5 +1,7 @@
 ## Hello World Ethereum: Create an Ethereum smart contract and interact with it from a website
 
+<div style="text-align: justify">
+
 This tutorial aims at providing a simple starting point for developing Ethereum/Web applications, by showing how the main pieces (blockchain, contract, and Web server) can be put together on one's computer. We show how to install locally a simulated Ethereum blockchain, how to compile and push an Ethereum contract to that blockchain, and how to interact with it from a website and explore transaction contents.   
 
 The contract used as an example is a 'simpleStorage' application, which allows to set and get a character string from an Ethereum contract. 
@@ -12,7 +14,7 @@ See following video for a live version of the tutorial:
 alt="Demo" width="480" height="360" border="10" align="center"/></a>
 
 
-Three main tools need to be installed for running this tutorial: `truffle` and `ganache`for the Ethereum development part, and `http-request` for running a local web server. These tools are based on [node.js](https://nodejs.org/en).
+Three main tools need to be installed for running this tutorial: `truffle` and `ganache` for the Ethereum development part, and `http-request` for running a local web server. These tools are based on [node.js](https://nodejs.org/en).
 
 With these tools, it is almost straightforward to create an Ethereum contract, send it on the blockchain, and interact with it from a website. 
 
@@ -45,7 +47,7 @@ The following tools are needed:
 	* npm: 5.5.1
 	* node: 6.9.1
 
-* `truffle` : [Truffle](http://truffleframework.com) is a development framework that greatly managing (compiling, migrating and testing) Ethereum contracts. See [here](https://github.com/trufflesuite/truffle) for installation.
+* `truffle` : [Truffle](http://truffleframework.com) is a development framework that greatly helps managing (compiling, migrating and testing) Ethereum contracts. See [here](https://github.com/trufflesuite/truffle) for installation.
 
 	Main step:
 	
@@ -112,7 +114,7 @@ cd $GANACHE_DIR
 npm start
 ```
 
-Ganache will start an Ethereum client listening by default on port 8545, create a set of 10 Ethereum accounts with 100 ether each (you are rich!), and open up a user interface where you can get account, bloks, transactions and logs information: 
+Ganache will start an Ethereum client listening by default on port 8545, create a set of 10 Ethereum accounts with 100 Ethers each (you are rich!), and open up a user interface where you can get accounts, blocks, transactions and logs information: 
 
 ![Ganache interface](images-readme/ganache.png "Ganache interface")
 
@@ -126,6 +128,7 @@ Now go the simple storage application
 ```
 cd $ETHEREUM_APP
 ```
+
 
 The folder is a Truffle project. The basic components of a Truffle project are:
 
@@ -161,7 +164,7 @@ Going to `ganache` user interface, in the 'Transactions' tab, you should see:
 
 ![Truffle compile](images-readme/ganache-tx.png)
 
-The logs tab will give you logs of these tansactions and contract creations, and the accounts tab will show that some Ether were used on the first account (since deploying contracts cost Ether).  
+The logs tab will give you logs of these tansactions and contract creations, and the accounts tab will show that some Ethers were used on the first account (since deploying contracts cost Ethers).  
 
 
 ## Interact with the contract from a website
@@ -172,12 +175,12 @@ The Web application is in `interactWithBlockchain.html`, in the main application
 http-server
 `
 
-It tells you the server is running at http://127.0.0.1:8080. Open the link in your browser, and open the `interactWithBlockchain.html` file. The page displays your current credit on your first Ethereum address, and allow you to change the status value in the contract. Below a screenshot of the web page, after having change the initial status 'Hello' in 'Here we go!':
+It tells you the server is running at http://127.0.0.1:8080. Open the link in your browser, and open the `interactWithBlockchain.html` file. The page displays your current credit on your first Ethereum address, and allows you to change the status content in the contract. Below a screenshot of the web page, after having changed the initial status 'Hello' to 'Here we go!':
 
 ![Web page](images-readme/webpage.png)
 
 
-The javascript code in `interactWithBlockchain.html` basically creates a contract object from the compiled contract JSON file, and interacts with using the web3 API. See the [web3 documentation](https://github.com/ethereum/web3.js/) for more information on how to interact with contracts, and other possibilities provided by the web3 API.  
+The javascript code in `interactWithBlockchain.html` basically creates a contract object from the compiled contract JSON file, and interacts with it using the web3 API. See the [web3 documentation](https://github.com/ethereum/web3.js/) for more information on how to interact with contracts, and other possibilities provided by the web3 API.  
 
 You can see in Ganache that a new transaction was created, from your contract address, to the SimpleStorage contract address:
 
@@ -187,13 +190,17 @@ and get its content by clicking on it:
 
 ![Transaction content compile](images-readme/tx_content.png)
 
+Note that in the `TX_DATA` (data sent over in the contract call), the string `4865726520776520676f21` is the ASCII equivalent for 'Here we go!' :)
+
 ## Going further:
 
-* A more advanced tutorial for building a pet shop Web application with Truffle: [http://truffleframework.com/tutorials/pet-shop](http://truffleframework.com/tutorials/pet-shop).
+* A more advanced tutorial for building a pet shop Web application with Truffle: [http://truffleframework.com/tutorials/pet-shop](http://truffleframework.com/tutorials/pet-shop)
 * [Truffle official documentation](http://truffleframework.com/docs/)
 * [Ethereum documentation](http://www.ethdocs.org/en/latest/)
 * [Web3 documentation](https://github.com/ethereum/web3.js/). 
 
+
+
 ## Donations
 
-If you found the content useful and feel generous: 0xc81F41fdBCF8e58F0Af07858dFc5F4E6B5D1C879
+If you found the content useful, [spread the love and upvote on SteemIt](https://steemit.com/ethereum/@yalb/hello-world-ethereum-create-an-ethereum-smart-contract-and-interact-with-it-from-a-website) :)
